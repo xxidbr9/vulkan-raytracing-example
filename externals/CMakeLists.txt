@@ -1,6 +1,7 @@
 # Add Vulkan library
 find_package(Vulkan REQUIRED)
 
+
 # Check if the imgui target already exists
 if (NOT TARGET imgui)
   add_library(imgui
@@ -23,4 +24,8 @@ endif()
 # Add glfw library
 if (NOT TARGET glfw)
   add_subdirectory(glfw)
+endif()
+
+if (NOT TARGET glm)
+  add_subdirectory(glm)
 endif()
