@@ -4,10 +4,10 @@
 # Table of Contents
 
 1. [Introduction](#introduction)
-2. [Setup](#setup)
-3. [Examples](#examples)
-  - [Hello World c++](examples/hello_world/)
-  - [Demo ImGui](examples/hello_imgui)
+1. [Setup](#setup)
+1. [Examples](#examples)
+    - [Hello World c++](examples/hello_world/)
+    - [Demo ImGui](examples/hello_imgui)
 
 
 
