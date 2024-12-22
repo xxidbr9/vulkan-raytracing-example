@@ -7,6 +7,7 @@
 1. [Setup](#setup)
 1. [Examples](#examples)
     - [Hello World c++](examples/hello_world/)
+    - [Triangle](examples/triangle)
     - [Demo ImGui](examples/hello_imgui)
 
 
