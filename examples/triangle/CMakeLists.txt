@@ -18,15 +18,15 @@ else()
     set(BUILD_TYPE_DIR "Debug")
 endif()
 
-file(GLOB SHADERS "${CMAKE_CURRENT_SOURCE_DIR}/shader/*.vert" "${CMAKE_CURRENT_SOURCE_DIR}/shader/*.frag")
+file(GLOB SHADERS "${CMAKE_CURRENT_SOURCE_DIR}/shaders/*.vert" "${CMAKE_CURRENT_SOURCE_DIR}/shaders/*.frag")
 foreach(SHADER ${SHADERS})
     get_filename_component(FILE_NAME ${SHADER} NAME)
     add_custom_command(
-        OUTPUT ${EXECUTABLE_DIR}/${BUILD_TYPE_DIR}/shader/${FILE_NAME}.spv
-        COMMAND glslc ${SHADER} -o ${EXECUTABLE_DIR}/${BUILD_TYPE_DIR}/shader/${FILE_NAME}.spv
+        OUTPUT ${EXECUTABLE_DIR}/${BUILD_TYPE_DIR}/shaders/${FILE_NAME}.spv
+        COMMAND glslc ${SHADER} -o ${EXECUTABLE_DIR}/${BUILD_TYPE_DIR}/shaders/${FILE_NAME}.spv
         DEPENDS ${SHADER}
     )
-    list(APPEND SPIRV_SHADERS ${EXECUTABLE_DIR}/${BUILD_TYPE_DIR}/shader/${FILE_NAME}.spv)
+    list(APPEND SPIRV_SHADERS ${EXECUTABLE_DIR}/${BUILD_TYPE_DIR}/shaders/${FILE_NAME}.spv)
 endforeach()
 
 add_custom_target(compile_shaders ALL DEPENDS ${SPIRV_SHADERS})
