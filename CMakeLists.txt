@@ -13,4 +13,5 @@ add_subdirectory(externals)
 set(EXECUTABLE_DIR ${CMAKE_BINARY_DIR}/executable)
 add_subdirectory(examples/hello_world)
 add_subdirectory(examples/hello_imgui)
+add_subdirectory(examples/triangle)
 
